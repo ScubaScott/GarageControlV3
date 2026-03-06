@@ -1,0 +1,5 @@
+<map id="updateHeater" name="updateHeater">
+<area shape="rect" id="Node000001" title="Updates heater ON/OFF state using hysteresis." alt="" coords="5,5,105,32"/>
+<area shape="rect" id="Node000002" href="$control_8cpp.html#a64a7582f58465d41b14fec0f1975e93b" title="Determines whether heater operation is allowed." alt="" coords="153,5,256,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,16,140,18,135,19,105,21"/>
+</map>

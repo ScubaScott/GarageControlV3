@@ -1,0 +1,73 @@
+/**
+ * @mainpage Smart Garage Controller
+ *
+ * @section intro_sec Introduction
+ *
+ * The **Smart Garage Controller** is a modular, extensible, and fully documented
+ * embedded automation system built on the Arduino Uno R4 WiFi platform.
+ * It provides intelligent control of garage lighting, heating, and door operation
+ * using a combination of sensors, relays, and a structured control logic engine.
+ *
+ * This documentation describes the complete software architecture, including:
+ * - Sensor subsystem (DS18B20 temperature, PIR motion, reed switches)
+ * - Actuator subsystem (relay-driven lights, heater, and door pulse)
+ * - Control logic (heater hysteresis, door grace timing, lighting automation)
+ * - User interface (LCD display, menu system, configuration editing)
+ * - Main application loop and system orchestration
+ *
+ * All modules are fully annotated with Doxygen comments and grouped into
+ * logical subsystems for clarity and maintainability.
+ *
+ * @section project_info Project Information
+ *
+ * - **Project Name:** Smart Garage Controller  
+ * - **Author:** ScubaScott  
+ * - **Version:** 3.0  
+ * - **License:** MIT  
+ *
+ * @section hardware_sec Hardware Overview
+ *
+ * The Smart Garage Controller is designed around the following hardware components:
+ *
+ * - **Arduino Uno R4 WiFi** — main microcontroller and system host  
+ * - **4‑channel 5V relay module** — controls lights, heater, and door button  
+ * - **DS18B20 temperature sensor** — provides temperature readings for heater logic  
+ * - **PIR motion sensor (HC‑SR501)** — triggers lighting and activity timers  
+ * - **Magnetic reed switches (2×)** — detect door fully open and fully closed positions  
+ * - **20×4 I²C LCD display** — user interface for status and configuration  
+ * - **Momentary pushbuttons (3×)** — UP / DOWN / SELECT navigation  
+ * - **5V power supply (2–3A)** — powers Uno and relay module  
+ * - **Screw terminals and wiring** — field connections for sensors and relays  
+ * - **Project enclosure** — protects electronics and provides mounting  
+ *
+ * @section subsystems Subsystem Overview
+ *
+ * The project is divided into the following logical subsystems:
+ *
+ * - @ref Sensors "Sensors Subsystem"  
+ * - @ref Actuators "Actuators Subsystem"  
+ * - @ref Control "Control Logic Subsystem"  
+ * - @ref UI "User Interface Subsystem"  
+ * - @ref MainApp "Main Application"  
+ *
+ * Each subsystem contains its own header and implementation files, with
+ * cross‑referenced documentation and diagrams where applicable.
+ *
+ * @section build_sec Building the Documentation
+ *
+ * To generate this documentation:
+ *
+ * 1. Install Doxygen  
+ * 2. Install Graphviz (optional, for diagrams)  
+ * 3. Run:  
+ *    @code
+ *    doxygen Doxyfile
+ *    @endcode
+ *
+ * The generated HTML documentation will appear in the `html/` directory.
+ *
+ * @section license_sec License
+ *
+ * This project is released under the MIT License.  
+ * See the LICENSE file for full details.
+ */

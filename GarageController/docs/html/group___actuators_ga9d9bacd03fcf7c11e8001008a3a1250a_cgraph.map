@@ -1,0 +1,5 @@
+<map id="actuatorsInit" name="actuatorsInit">
+<area shape="rect" id="Node000001" title="Initializes actuator pins and internal timing state." alt="" coords="5,5,99,32"/>
+<area shape="rect" id="Node000002" href="$actuators_8cpp.html#af89ffed51b8d88940281e4f4e80c87e7" title="Writes a logical state to a relay pin, respecting active&#45;high/low." alt="" coords="147,5,230,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,16,134,18,128,19,99,21"/>
+</map>

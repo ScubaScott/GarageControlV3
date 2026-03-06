@@ -1,0 +1,7 @@
+<map id="drawStatusScreen" name="drawStatusScreen">
+<area shape="rect" id="Node000001" title="Renders the main STATUS screen." alt="" coords="5,31,134,57"/>
+<area shape="rect" id="Node000002" href="$group___control.html#gabecb5f83728978fa055fb79b320ce04d" title="Returns the desired actuator outputs." alt="" coords="182,5,319,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,32,169,30,163,31,135,38"/>
+<area shape="rect" id="Node000003" href="$sensors_8cpp.html#a747eba28f262113fcfec0a92386d2d36" title="Returns the most recently computed sensor state." alt="" coords="191,56,310,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,50,178,58,172,59,134,56"/>
+</map>

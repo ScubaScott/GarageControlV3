@@ -1,0 +1,7 @@
+<map id="enterEditMode" name="enterEditMode">
+<area shape="rect" id="Node000001" title="Enters EDIT mode for modifying a configuration value." alt="" coords="172,31,277,57"/>
+<area shape="rect" id="Node000002" href="$menu__callbacks_8cpp.html#a5bf55b9dfb33197b2c80ce3579947d70" title="Begins editing the &quot;heat off&quot; temperature threshold." alt="" coords="5,5,124,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,34,124,31,124,25,159,33"/>
+<area shape="rect" id="Node000003" href="$menu__callbacks_8cpp.html#a94a5e9358cfeea74b2ff1f4ce562b02c" title="Begins editing the &quot;heat on&quot; temperature threshold." alt="" coords="5,56,124,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="154,55,125,63,124,57,159,54"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="ui.cpp" name="ui.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="93,5,149,32"/>
+<area shape="rect" id="Node000002" href="$ui_8h.html" title="Public interface for the User Interface (UI) subsystem." alt="" coords="5,80,48,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,35,57,72,53,69,106,30"/>
+<area shape="rect" id="Node000004" href="$ui__state_8h.html" title="UI state machine definitions for the Smart Garage Controller." alt="" coords="87,155,166,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="119,30,114,66,113,106,120,140,115,140,108,107,109,66,117,35"/>
+<area shape="rect" id="Node000005" href="$render_8h.html" title=" " alt="" coords="123,80,191,107"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="128,30,147,66,141,66,127,35"/>
+<area shape="rect" id="Node000006" href="$input_8h.html" title=" " alt="" coords="194,155,254,181"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="147,30,179,50,206,79,219,109,225,141,220,139,214,110,202,81,176,54,148,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="94,229,159,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="34,105,78,180,107,217,102,218,74,183,31,109"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="128,180,129,215,124,213,125,184"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="154,105,140,142,136,139,150,109"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="209,181,157,222,154,218,204,183"/>
+</map>

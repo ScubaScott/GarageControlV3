@@ -1,0 +1,7 @@
+<map id="heaterAllowed" name="heaterAllowed">
+<area shape="rect" id="Node000001" title="Determines whether heater operation is allowed." alt="" coords="303,5,406,32"/>
+<area shape="rect" id="Node000002" href="$control_8cpp.html#ad960933e24b9fd6ac00287d663af03e2" title="Updates heater ON/OFF state using hysteresis." alt="" coords="156,5,255,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="284,19,256,21,255,16,290,19"/>
+<area shape="rect" id="Node000003" href="$group___control.html#ga7cd7036a6c0c2068a52b40e6e1105e45" title="Updates internal logic based on sensor readings." alt="" coords="5,5,108,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="137,19,108,21,108,16,143,18"/>
+</map>

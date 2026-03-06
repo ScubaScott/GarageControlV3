@@ -1,0 +1,16 @@
+<map id="ui_state.h" name="ui_state.h">
+<area shape="rect" id="Node000001" title="UI state machine definitions for the Smart Garage Controller." alt="" coords="267,5,345,32"/>
+<area shape="rect" id="Node000002" href="$menu_8cpp.html" title=" " alt="" coords="5,80,84,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="251,38,85,84,83,79,252,32"/>
+<area shape="rect" id="Node000003" href="$menu__callbacks_8cpp.html" title="Menu action handlers for the Smart Garage Controller UI." alt="" coords="108,80,248,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="273,39,202,82,199,77,268,41"/>
+<area shape="rect" id="Node000004" href="$render_8h.html" title=" " alt="" coords="272,80,340,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="307,46,308,81,304,78,304,50"/>
+<area shape="rect" id="Node000006" href="$ui_8cpp.html" title=" " alt="" coords="350,155,406,181"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="329,41,355,79,370,119,378,156,373,153,365,121,350,81,327,46"/>
+<area shape="rect" id="Node000007" href="$ui__state_8cpp.html" title="Implementation of the UI state machine for the Smart Garage Controller." alt="" coords="416,80,508,107"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="347,36,437,79,432,80,346,41"/>
+<area shape="rect" id="Node000005" href="$render_8cpp.html" title=" " alt="" coords="243,155,326,181"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="300,120,290,156,286,152,296,123"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="330,115,368,155,363,154,328,120"/>
+</map>

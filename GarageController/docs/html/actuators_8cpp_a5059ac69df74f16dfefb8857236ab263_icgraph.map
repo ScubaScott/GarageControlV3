@@ -1,0 +1,5 @@
+<map id="applyLightsRelay" name="applyLightsRelay">
+<area shape="rect" id="Node000001" title="Drives the lights relay." alt="" coords="162,5,283,32"/>
+<area shape="rect" id="Node000002" href="$group___actuators.html#ga40479eaebc715382f7f8c46c0483f8c9" title="Applies the desired actuator state to the physical outputs." alt="" coords="5,5,114,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,19,114,21,114,16,149,18"/>
+</map>

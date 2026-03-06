@@ -1,0 +1,5 @@
+<map id="controlSetConfig" name="controlSetConfig">
+<area shape="rect" id="Node000001" title="Replaces the current system configuration." alt="" coords="178,5,296,32"/>
+<area shape="rect" id="Node000002" href="$menu__callbacks_8cpp.html#aa6de8fca3dcf93f9d07dc775e2e2d92d" title="Cycles through heater modes (OFF → AUTO → MANUAL → OFF)." alt="" coords="5,5,130,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,19,130,21,130,16,165,18"/>
+</map>

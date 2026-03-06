@@ -1,0 +1,5 @@
+<map id="Menu" name="Menu">
+<area shape="rect" id="Node000001" title=" " alt="" coords="18,104,72,131"/>
+<area shape="rect" id="Node000002" href="$struct_menu_item.html" title="Represents a single menu entry." alt="" coords="5,5,85,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="47,47,48,104,42,103,43,49"/>
+</map>

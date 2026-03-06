@@ -1,0 +1,5 @@
+<map id="uiStateHandleEvent" name="uiStateHandleEvent">
+<area shape="rect" id="Node000001" title="Handles button events and updates UI state accordingly." alt="" coords="160,5,297,32"/>
+<area shape="rect" id="Node000002" href="$group___u_i.html#ga59e875997ef250c370ada71cea3dbfc8" title="Feeds a button event into the UI state machine." alt="" coords="5,5,112,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,19,112,21,112,16,146,18"/>
+</map>

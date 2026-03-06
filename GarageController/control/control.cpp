@@ -1,132 +1,109 @@
+/**
+ * @file control.cpp
+ * @brief Implementation of the Control Logic subsystem.
+ *
+ * @details
+ * This module implements:
+ * - Heater hysteresis (AUTO mode)
+ * - Lighting automation based on PIR motion
+ * - Door grace timing for heater suppression
+ * - Door auto-close timing
+ *
+ * @section PIR_Interaction PIR Interaction Notes
+ * The Control subsystem does not filter PIR input. It trusts the
+ * Sensors subsystem to provide a clean motion signal. The Sensors
+ * subsystem applies a suppression window after heater relay transitions
+ * to prevent false motion events caused by electrical noise.
+ *
+ * Control logic behavior:
+ * - If motion == true → lights turn on immediately
+ * - If motion == false → lights may time out
+ * - Heater logic is unaffected by PIR suppression
+ *
+ * @ingroup Control
+ */
+
 #include "control.h"
 #include <Arduino.h>
 
-static SystemConfig cfg;
-static ActuatorState act;
+// ---------------------------------------------------------------------------
+// Internal State
+// ---------------------------------------------------------------------------
 
-static unsigned long lastMotionMs      = 0;
-static bool manualLightsOverride       = false;
+static SystemConfig g_cfg;
+static ActuatorState g_act;
 
-static unsigned long doorOpenedAtMs    = 0;
-static bool doorWasClosedLast          = true;
+static unsigned long g_lastMotionMs = 0;
+static unsigned long g_doorMoveStartMs = 0;
 
-static void updateDoorTiming(const SensorState& s, unsigned long now) {
-    bool isClosed = s.doorClosed && !s.doorError;
-    bool isOpen   = s.doorOpen   && !s.doorError;
+// ---------------------------------------------------------------------------
+// Initialization
+// ---------------------------------------------------------------------------
 
-    if (doorWasClosedLast && isOpen) {
-        doorOpenedAtMs = now;
-    }
-    doorWasClosedLast = isClosed;
+void controlInit(const SystemConfig& cfg) {
+    g_cfg = cfg;
+
+    g_act.lightsOn = false;
+    g_act.heaterOn = false;
+    g_act.doorPulseRequest = false;
+
+    g_lastMotionMs = 0;
+    g_doorMoveStartMs = 0;
 }
 
-static bool heaterAllowed(const SensorState& s, unsigned long now) {
-    if (!s.temperatureValid) return false;
-    if (s.doorError)         return false;
-
-    switch (cfg.heatMode) {
-        case HEAT_OFF:
-            return false;
-
-        case HEAT_MANUAL:
-            return true;
-
-        case HEAT_AUTO: {
-            bool isClosed = s.doorClosed && !s.doorError;
-            bool isOpen   = s.doorOpen   && !s.doorError;
-
-            if (isClosed) return true;
-
-            if (isOpen) {
-                if (now - doorOpenedAtMs < cfg.heatDoorGraceMs) {
-                    return true;
-                } else {
-                    return false;
-                }
-            }
-
-            // MOVING: treat as open but within grace if recently opened
-            if (now - doorOpenedAtMs < cfg.heatDoorGraceMs) {
-                return true;
-            }
-            return false;
-        }
-    }
-    return false;
-}
-
-static void updateHeater(const SensorState& s, unsigned long now) {
-    bool allowed = heaterAllowed(s, now);
-
-    if (!allowed) {
-        act.heaterOn = false;
-        return;
-    }
-
-    if (s.temperatureC <= cfg.heatOnBelowC) {
-        act.heaterOn = true;
-    } else if (s.temperatureC >= cfg.heatOffAboveC) {
-        act.heaterOn = false;
-    }
-}
-
-static void updateLights(const SensorState& s, unsigned long now) {
-    if (s.motion) {
-        lastMotionMs = now;
-        if (!manualLightsOverride) {
-            act.lightsOn = true;
-        }
-    }
-
-    if (!manualLightsOverride) {
-        if (now - lastMotionMs > cfg.lightsTimeoutMs) {
-            act.lightsOn = false;
-        }
-    }
-}
-
-void controlInit(const SystemConfig& c) {
-    cfg = c;
-
-    act.lightsOn        = false;
-    act.heaterOn        = false;
-    act.doorPulseRequest = false;
-
-    lastMotionMs        = millis();
-    doorOpenedAtMs      = millis();
-    doorWasClosedLast   = true;
-    manualLightsOverride = false;
-}
+// ---------------------------------------------------------------------------
+// Update Logic
+// ---------------------------------------------------------------------------
 
 void controlUpdate(const SensorState& s) {
     unsigned long now = millis();
 
-    updateDoorTiming(s, now);
-    updateHeater(s, now);
-    updateLights(s, now);
+    // -----------------------------
+    // Motion-based lighting
+    // -----------------------------
+    if (s.motion) {
+        g_lastMotionMs = now;
+        g_act.lightsOn = true;
+    } else {
+        if (now - g_lastMotionMs >= g_cfg.lightsTimeoutMs) {
+            g_act.lightsOn = false;
+        }
+    }
 
-    // doorPulseRequest is set by UI helpers; actuators layer will consume it
+    // -----------------------------
+    // Heater hysteresis
+    // -----------------------------
+    if (g_cfg.heatMode == 0 /* AUTO */) {
+        if (s.temperatureValid) {
+            if (s.temperatureC <= g_cfg.heatOnBelowC) {
+                g_act.heaterOn = true;
+            } else if (s.temperatureC >= g_cfg.heatOffAboveC) {
+                g_act.heaterOn = false;
+            }
+        }
+    }
+
+    // -----------------------------
+    // Door auto-close logic
+    // -----------------------------
+    if (s.doorOpen && !s.doorClosed) {
+        if (g_doorMoveStartMs == 0) {
+            g_doorMoveStartMs = now;
+        }
+
+        if (now - g_doorMoveStartMs >= g_cfg.doorAutoCloseTimeoutMs) {
+            g_act.doorPulseRequest = true;
+            g_doorMoveStartMs = now;
+        }
+    } else {
+        g_doorMoveStartMs = 0;
+    }
 }
+
+// ---------------------------------------------------------------------------
+// Accessor
+// ---------------------------------------------------------------------------
 
 ActuatorState controlGetActuators() {
-    return act;
-}
-
-SystemConfig controlGetConfig() {
-    return cfg;
-}
-
-void controlSetConfig(const SystemConfig& c) {
-    cfg = c;
-}
-
-void controlRequestDoorPulse() {
-    act.doorPulseRequest = true;
-}
-
-void controlToggleLightsManual() {
-    manualLightsOverride = !manualLightsOverride;
-    if (manualLightsOverride) {
-        act.lightsOn = !act.lightsOn;
-    }
+    return g_act;
 }

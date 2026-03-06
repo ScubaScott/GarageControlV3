@@ -1,18 +1,26 @@
+/**
+ * @file menu_callbacks.h
+ * @brief Declarations for menu action handlers.
+ *
+ * @ingroup UI
+ */
+
 #pragma once
 
-void cbHeatOnBelow();
-void cbHeatOffAbove();
-void cbHeatMode();
-void cbHeatDoorGrace();
+/** @brief Toggle lights manually. */
+void menuToggleLights();
 
-void cbLightTimeout();
-void cbManualLights();
+/** @brief Trigger a door pulse. */
+void menuPulseDoor();
 
-void cbDoorAutoClose();
-void cbDoorTravelTime();
-void cbManualDoorClose();
+/** @brief Cycle heater mode (OFF → AUTO → MANUAL). */
+void menuHeaterMode();
 
-void cbUnits();
-void cbLcdBrightness();
-void cbLcdTimeout();
-void cbReboot();
+/** @brief Begin editing the "heat on" temperature threshold. */
+void menuSetHeatOn();
+
+/** @brief Begin editing the "heat off" temperature threshold. */
+void menuSetHeatOff();
+
+/** @brief Exit the menu and return to the status screen. */
+void menuExit();

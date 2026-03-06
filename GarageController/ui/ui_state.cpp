@@ -1,65 +1,130 @@
+/**
+ * @file ui_state.cpp
+ * @brief Implementation of the UI state machine for the Smart Garage Controller.
+ *
+ * @details
+ * This module manages the high-level UI state:
+ * - Current screen (status, menu, edit)
+ * - Menu navigation index
+ * - Editing mode
+ * - LCD refresh timing
+ *
+ * It does NOT perform LCD rendering directly. Rendering is handled by:
+ * - menus.cpp
+ * - menu_callbacks.cpp
+ *
+ * The UI state machine is driven by:
+ * - uiStateHandleEvent() for button input
+ * - uiStateUpdate() for periodic refresh
+ *
+ * @ingroup UI
+ */
+
 #include "ui_state.h"
-#include "render.h"
-#include "input.h"
-#include "actions.h"
+#include "ui.h"
 #include <Arduino.h>
 
-static UiContext ui;
+// ---------------------------------------------------------------------------
+// Global UI state instance
+// ---------------------------------------------------------------------------
+
+UIState g_uiState;
+
+// ---------------------------------------------------------------------------
+// Constants
+// ---------------------------------------------------------------------------
+
+/** @brief Minimum time between LCD refreshes (ms). */
+static const uint32_t UI_REFRESH_INTERVAL_MS = 250;
+
+// ---------------------------------------------------------------------------
+// Public API
+// ---------------------------------------------------------------------------
 
 void uiStateInit() {
-    ui.state = UI_MAIN;
-    ui.currentMenu = nullptr;
-    ui.nav = {0,0};
-    ui.lcdNeedsUpdate = true;
-    ui.lastInteractionMs = millis();
+    g_uiState.screen        = UI_STATUS;
+    g_uiState.menuIndex     = 0;
+    g_uiState.editing       = false;
+    g_uiState.lastRefreshMs = millis();
 }
 
-void uiStateHandleEvent(ButtonEvent e) {
-    ui.lastInteractionMs = millis();
+/**
+ * @brief Handles button events and updates UI state accordingly.
+ *
+ * @details
+ * Behavior by screen:
+ *
+ * STATUS screen:
+ * - UP/DOWN: no effect
+ * - SELECT: enter MENU screen
+ *
+ * MENU screen:
+ * - UP: move selection up
+ * - DOWN: move selection down
+ * - SELECT: invoke menu callback (handled in menus.cpp)
+ *
+ * EDIT screen:
+ * - UP/DOWN: modify value (handled in callbacks)
+ * - SELECT: exit edit mode
+ *
+ * @param ev Button event.
+ */
+void uiStateHandleEvent(uint8_t ev) {
+    switch (g_uiState.screen) {
 
-    switch(ui.state) {
-
-        case UI_MAIN:
-            if (e == BTN_UP_SHORT || e == BTN_SELECT_SHORT) {
-                ui.state = UI_MENU_ROOT;
-                ui.nav = {0,0};
-                ui.lcdNeedsUpdate = true;
+        // ---------------------------------------------------------------
+        // STATUS SCREEN
+        // ---------------------------------------------------------------
+        case UI_STATUS:
+            if (ev == BTN_SELECT) {
+                g_uiState.screen = UI_MENU;
+                g_uiState.menuIndex = 0;
             }
-            else if (e == BTN_UP_LONG) {
-                pulseDoorRelay();
+            break;
+
+        // ---------------------------------------------------------------
+        // MENU SCREEN
+        // ---------------------------------------------------------------
+        case UI_MENU:
+            if (ev == BTN_UP) {
+                if (g_uiState.menuIndex > 0) {
+                    g_uiState.menuIndex--;
+                }
             }
-            else if (e == BTN_DOWN_LONG) {
-                toggleLights();
+            else if (ev == BTN_DOWN) {
+                g_uiState.menuIndex++;
+            }
+            else if (ev == BTN_SELECT) {
+                // Actual callback is invoked in menus.cpp
+                // UI state machine only changes mode if callback requests it
             }
             break;
 
-        case UI_MENU_ROOT:
-        case UI_MENU_SUBMENU:
-            handleMenuNavigation(e, ui);
-            break;
-
-        case UI_EDIT_VALUE:
-            handleEditValue(e, ui);
-            break;
-
-        case UI_CONFIRM:
-            handleConfirm(e, ui);
-            break;
-
-        case UI_STATUS_PAGES:
-            handleStatusPages(e, ui);
+        // ---------------------------------------------------------------
+        // EDIT SCREEN
+        // ---------------------------------------------------------------
+        case UI_EDIT:
+            if (ev == BTN_SELECT) {
+                g_uiState.editing = false;
+                g_uiState.screen = UI_MENU;
+            }
+            // UP/DOWN handled by callback functions
             break;
     }
 }
 
-void uiStateLoop() {
-    if (millis() - ui.lastInteractionMs > 30000) {
-        ui.state = UI_MAIN;
-        ui.lcdNeedsUpdate = true;
-    }
+/**
+ * @brief Periodic UI update (LCD refresh timing).
+ *
+ * @details
+ * This function does not draw anything itself. It simply determines when
+ * the LCD should be refreshed. The actual rendering is performed by uiLoop().
+ */
+void uiStateUpdate() {
+    uint32_t now = millis();
 
-    if (ui.lcdNeedsUpdate) {
-        renderUi(ui);
-        ui.lcdNeedsUpdate = false;
+    if (now - g_uiState.lastRefreshMs >= UI_REFRESH_INTERVAL_MS) {
+        g_uiState.lastRefreshMs = now;
+        // Rendering happens in uiLoop() (ui.cpp)
     }
 }

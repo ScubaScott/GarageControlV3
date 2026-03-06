@@ -1,0 +1,5 @@
+<map id="drawStatusScreen" name="drawStatusScreen">
+<area shape="rect" id="Node000001" title="Renders the main STATUS screen." alt="" coords="156,5,284,32"/>
+<area shape="rect" id="Node000002" href="$menu_8cpp.html#a53da59458153ecf7f54ee129d6dc0477" title="Renders the appropriate screen based on UI state." alt="" coords="5,5,108,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,19,108,21,108,16,142,18"/>
+</map>

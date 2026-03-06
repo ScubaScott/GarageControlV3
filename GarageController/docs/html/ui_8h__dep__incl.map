@@ -1,0 +1,9 @@
+<map id="ui.h" name="ui.h">
+<area shape="rect" id="Node000001" title="Public interface for the User Interface (UI) subsystem." alt="" coords="115,5,158,32"/>
+<area shape="rect" id="Node000002" href="$menu_8cpp.html" title=" " alt="" coords="5,80,84,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,42,62,82,59,77,106,41"/>
+<area shape="rect" id="Node000003" href="$ui_8cpp.html" title=" " alt="" coords="108,80,165,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="138,46,139,81,134,78,135,50"/>
+<area shape="rect" id="Node000004" href="$ui__state_8cpp.html" title="Implementation of the UI state machine for the Smart Garage Controller." alt="" coords="189,80,281,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="167,39,221,79,216,80,165,44"/>
+</map>

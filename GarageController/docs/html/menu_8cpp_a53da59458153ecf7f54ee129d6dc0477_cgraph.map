@@ -1,0 +1,13 @@
+<map id="menusRender" name="menusRender">
+<area shape="rect" id="Node000001" title="Renders the appropriate screen based on UI state." alt="" coords="5,56,108,83"/>
+<area shape="rect" id="Node000002" href="$menu_8cpp.html#aeb47d5bce8464f6c564b822231b8c334" title="Renders the EDIT screen." alt="" coords="163,5,276,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,53,162,35,158,39,103,58"/>
+<area shape="rect" id="Node000003" href="$menu_8cpp.html#a74f61154ae0d95b0cbcb990bb618bd6b" title="Renders the MENU screen." alt="" coords="159,56,281,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="108,67,145,68,140,71,109,72"/>
+<area shape="rect" id="Node000004" href="$menu_8cpp.html#ac7b45625afa882ca79f9bd66562ebabc" title="Renders the main STATUS screen." alt="" coords="156,107,284,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="102,81,163,100,158,103,102,86"/>
+<area shape="rect" id="Node000005" href="$group___control.html#gabecb5f83728978fa055fb79b320ce04d" title="Returns the desired actuator outputs." alt="" coords="332,81,469,108"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="284,108,319,106,314,107,285,114"/>
+<area shape="rect" id="Node000006" href="$sensors_8cpp.html#a747eba28f262113fcfec0a92386d2d36" title="Returns the most recently computed sensor state." alt="" coords="341,132,460,159"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="285,126,328,135,323,135,284,132"/>
+</map>

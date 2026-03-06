@@ -1,0 +1,7 @@
+<map id="controlToggleLightsManual" name="controlToggleLightsManual">
+<area shape="rect" id="Node000001" title="Toggles manual lighting override mode." alt="" coords="180,31,355,57"/>
+<area shape="rect" id="Node000002" href="$menu__callbacks_8cpp.html#ae2bdcb428c9356d2115fbb7b7d1126e1" title="Toggles the lights manually." alt="" coords="5,5,132,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,31,132,29,132,24,167,30"/>
+<area shape="rect" id="Node000003" href="$actions_8cpp.html#a1c27b4a78f2ff97f872b345c26c61ab8" title=" " alt="" coords="23,56,114,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="162,58,115,66,114,61,167,57"/>
+</map>

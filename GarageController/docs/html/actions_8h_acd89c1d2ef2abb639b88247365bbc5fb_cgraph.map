@@ -1,0 +1,5 @@
+<map id="pulseDoorRelay" name="pulseDoorRelay">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,120,32"/>
+<area shape="rect" id="Node000002" href="$group___control.html#gab6cd018b89f03e89b1f08219c6ba04cb" title="Requests a door button pulse on the next update cycle." alt="" coords="168,5,338,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,16,154,18,149,19,120,21"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="menuSetHeatOn" name="menuSetHeatOn">
+<area shape="rect" id="Node000001" title="Begins editing the &quot;heat on&quot; temperature threshold." alt="" coords="5,5,124,32"/>
+<area shape="rect" id="Node000002" href="$menu__callbacks_8cpp.html#a9554c4e0a0fc35244e79009d27bcae48" title="Enters EDIT mode for modifying a configuration value." alt="" coords="172,5,277,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,16,159,18,153,19,124,21"/>
+</map>

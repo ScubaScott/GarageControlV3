@@ -1,0 +1,9 @@
+<map id="actuatorsApply" name="actuatorsApply">
+<area shape="rect" id="Node000001" title="Applies the desired actuator state to the physical outputs." alt="" coords="5,56,114,83"/>
+<area shape="rect" id="Node000002" href="$actuators_8cpp.html#a5a77fcda08ce1d4dd5626ba5e234ffcf" title="Handles the door button relay pulse timing." alt="" coords="167,5,282,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,53,166,36,162,39,107,58"/>
+<area shape="rect" id="Node000003" href="$actuators_8cpp.html#a4cc858c70b5952bd8e0eef3a1637437a" title="Drives the heater relay and records transition timestamps." alt="" coords="162,56,287,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="113,67,149,68,144,70,114,72"/>
+<area shape="rect" id="Node000004" href="$actuators_8cpp.html#a5059ac69df74f16dfefb8857236ab263" title="Drives the lights relay." alt="" coords="164,107,285,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="106,81,167,101,162,103,105,86"/>
+</map>

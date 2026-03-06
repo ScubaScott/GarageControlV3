@@ -1,0 +1,11 @@
+<map id="controlUpdate" name="controlUpdate">
+<area shape="rect" id="Node000001" title="Updates internal logic based on sensor readings." alt="" coords="5,56,108,83"/>
+<area shape="rect" id="Node000002" href="$control_8cpp.html#a1c5ef76fcdf080d7b2756cae88a9956f" title="Tracks door transitions to manage heater grace timing." alt="" coords="156,5,283,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,53,162,35,158,39,103,58"/>
+<area shape="rect" id="Node000003" href="$control_8cpp.html#ad960933e24b9fd6ac00287d663af03e2" title="Updates heater ON/OFF state using hysteresis." alt="" coords="170,56,269,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="108,67,157,68,152,70,108,72"/>
+<area shape="rect" id="Node000005" href="$control_8cpp.html#a24f50a1471a1392de8dcf1dac7785de7" title="Updates lighting state based on motion and manual override." alt="" coords="172,107,267,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="102,81,162,101,157,103,102,86"/>
+<area shape="rect" id="Node000004" href="$control_8cpp.html#a64a7582f58465d41b14fec0f1975e93b" title="Determines whether heater operation is allowed." alt="" coords="331,56,434,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="269,67,318,69,313,70,270,72"/>
+</map>

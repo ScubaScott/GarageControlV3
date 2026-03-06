@@ -1,0 +1,5 @@
+<map id="uiStateInit" name="uiStateInit">
+<area shape="rect" id="Node000001" title="Initializes the UI state machine." alt="" coords="103,5,183,32"/>
+<area shape="rect" id="Node000002" href="$group___u_i.html#gabfc0a68d1b55e1a921a7b7a48a156d78" title="Initializes the UI subsystem (LCD, state, menus)." alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="toggleLights" name="toggleLights">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,97,32"/>
+<area shape="rect" id="Node000002" href="$group___control.html#gae3e5972ee5c50cdc39cdbfe63517baeb" title="Toggles manual lighting override mode." alt="" coords="145,5,320,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,16,131,18,126,19,97,21"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="actuators.cpp" name="actuators.cpp">
+<area shape="rect" id="Node000001" title="Implementation of the Actuators subsystem." alt="" coords="50,5,151,32"/>
+<area shape="rect" id="Node000002" href="$actuators_8h.html" title="Actuator subsystem interface for the Smart Garage Controller." alt="" coords="5,80,92,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,35,68,69,64,66,93,30"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="116,80,192,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="110,30,138,67,133,68,109,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="16,155,81,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="50,105,51,140,46,139,47,109"/>
+</map>

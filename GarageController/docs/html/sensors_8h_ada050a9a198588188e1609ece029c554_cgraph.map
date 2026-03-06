@@ -1,0 +1,7 @@
+<map id="sensorsPoll" name="sensorsPoll">
+<area shape="rect" id="Node000001" title="Polls all sensors and updates internal state." alt="" coords="5,31,95,57"/>
+<area shape="rect" id="Node000002" href="$sensors_8cpp.html#a7de23d0627caed0934651be35897e1db" title="Applies polarity correction for NO/NC reed switches." alt="" coords="154,5,250,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,34,141,28,136,30,96,39"/>
+<area shape="rect" id="Node000003" href="$sensors_8cpp.html#a7e16823b5a7459ffc35044162b0a1c2e" title="Updates a debounce structure based on raw input." alt="" coords="143,56,262,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="95,49,130,56,125,57,95,54"/>
+</map>

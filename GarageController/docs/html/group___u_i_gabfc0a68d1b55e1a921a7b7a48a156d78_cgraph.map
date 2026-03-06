@@ -1,0 +1,5 @@
+<map id="uiInit" name="uiInit">
+<area shape="rect" id="Node000001" title="Initializes the UI subsystem (LCD, state, menus)." alt="" coords="5,5,55,32"/>
+<area shape="rect" id="Node000002" href="$ui__state_8cpp.html#a9a7d9bd73257cddf529243a37b20f3ae" title="Initializes the UI state machine." alt="" coords="103,5,183,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,16,90,18,84,19,55,21"/>
+</map>

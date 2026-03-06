@@ -1,0 +1,5 @@
+<map id="applyPolarity" name="applyPolarity">
+<area shape="rect" id="Node000001" title="Applies polarity correction for NO/NC reed switches." alt="" coords="143,5,239,32"/>
+<area shape="rect" id="Node000002" href="$sensors_8cpp.html#ada050a9a198588188e1609ece029c554" title="Polls all sensors and updates internal state." alt="" coords="5,5,95,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,19,95,21,95,16,130,18"/>
+</map>

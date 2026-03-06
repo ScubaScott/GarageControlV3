@@ -1,0 +1,7 @@
+<map id="controlRequestDoorPulse" name="controlRequestDoorPulse">
+<area shape="rect" id="Node000001" title="Requests a door button pulse on the next update cycle." alt="" coords="168,31,338,57"/>
+<area shape="rect" id="Node000002" href="$menu__callbacks_8cpp.html#ac09c7a1e6b7febb968155d4cbe6c9d81" title="Sends a door pulse request to the control subsystem." alt="" coords="5,5,120,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,31,120,29,120,24,155,30"/>
+<area shape="rect" id="Node000003" href="$actions_8cpp.html#acd89c1d2ef2abb639b88247365bbc5fb" title=" " alt="" coords="5,56,120,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="150,58,121,64,120,59,155,57"/>
+</map>

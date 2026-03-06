@@ -1,0 +1,28 @@
+<map id="menu.cpp" name="menu.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="275,5,354,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,77,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="274,33,93,81,91,76,275,28"/>
+<area shape="rect" id="Node000003" href="$ui__state_8h.html" title="UI state machine definitions for the Smart Garage Controller." alt="" coords="115,155,194,181"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="272,30,227,49,203,64,183,82,167,110,159,141,155,138,162,108,179,78,200,59,225,45,277,27"/>
+<area shape="rect" id="Node000005" href="$ui_8h.html" title="Public interface for the User Interface (UI) subsystem." alt="" coords="237,155,280,181"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="273,29,230,48,209,62,193,81,189,98,195,115,209,130,227,147,222,147,205,134,191,117,183,98,188,79,205,59,227,43,277,26"/>
+<area shape="rect" id="Node000006" href="$menu__callbacks_8h.html" title="Declarations for menu action handlers." alt="" coords="202,80,328,107"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="308,31,284,69,280,65,304,34"/>
+<area shape="rect" id="Node000007" href="$sensors_8h.html" title="Sensor subsystem interface for the Smart Garage Controller." alt="" coords="312,155,391,181"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="322,30,342,79,352,140,347,138,337,81,320,35"/>
+<area shape="rect" id="Node000008" href="$control_8h.html" title="Control Logic subsystem interface for the Smart Garage Controller." alt="" coords="403,80,474,107"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="336,30,407,72,401,72,336,35"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="498,80,574,107"/>
+<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="353,30,485,74,480,75,353,35"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="598,80,734,107"/>
+<area shape="poly" id="edge15_Node000001_Node000011" title=" " alt="" coords="354,25,592,75,588,78,354,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="320,229,384,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="189,179,308,223,303,225,188,184"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="275,179,326,220,321,219,274,184"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="354,180,354,215,350,212,350,184"/>
+<area shape="poly" id="edge10_Node000008_Node000004" title=" " alt="" coords="437,105,424,142,405,183,376,220,373,216,400,180,420,140,433,109"/>
+<area shape="poly" id="edge11_Node000008_Node000007" title=" " alt="" coords="426,106,379,147,377,142,421,108"/>
+<area shape="rect" id="Node000009" href="$actuators_8h.html" title="Actuator subsystem interface for the Smart Garage Controller." alt="" coords="464,155,551,181"/>
+<area shape="poly" id="edge12_Node000008_Node000009" title=" " alt="" coords="451,105,488,144,482,143,450,110"/>
+<area shape="poly" id="edge13_Node000009_Node000004" title=" " alt="" coords="483,181,394,225,392,220,478,182"/>
+</map>
